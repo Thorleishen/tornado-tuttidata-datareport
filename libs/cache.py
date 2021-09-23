@@ -3,7 +3,7 @@
 # @Time : 2021/9/23 11:52 上午
 # @Author : zhenyu lei
 # @File : cache.py
-# @desc :
+# @desc : 缓存类
 import aioredis
 
 
