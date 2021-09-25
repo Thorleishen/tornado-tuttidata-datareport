@@ -6,13 +6,15 @@
 # @desc : 获取配置文件
 import configparser
 
-from utils import singleton
 
-
-@singleton
 class Config(object):
 
-    def __init__(self):
-        self.conf = configparser.ConfigParser()
-        self.conf.read('../config.ini')
-        self.setions = self.conf.sections()
+    conf = configparser.ConfigParser()  # 项目启动时初始化一次，直接使用类变量，共享全局变量（类）
+    conf.read('../config.ini')
+
+
+if __name__ == '__main__':
+    Config.conf.add_section('OSS')
+    Config.conf.set('OSS', 'bucket_name', 'leizhenyu')
+    print(Config.conf.sections())
+    print(dict(Config.conf['OSS']))
