@@ -4,3 +4,10 @@
 # @Author : zhenyu lei
 # @File : __init__.py.py
 # @desc :
+
+from handlers.example.handler import TestHandler
+
+
+example_handlers = [
+    (r'/test', TestHandler)
+]
