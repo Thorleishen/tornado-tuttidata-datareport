@@ -4,3 +4,10 @@
 # @Author : zhenyu lei
 # @File : models.py
 # @desc :
+from peewee import CharField
+
+from handlers.base_model import BaseModel
+
+
+class User(BaseModel):
+    username = CharField()

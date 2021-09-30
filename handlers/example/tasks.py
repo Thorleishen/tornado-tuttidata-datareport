@@ -7,6 +7,7 @@
 from celery import Celery
 
 from libs.json_log_format import JsonLog
+from tornado.concurrent import run_on_executor
 
 broker = "redis://localhost:6379/1"
 backend = "redis://localhost:6379/2"
@@ -14,5 +15,5 @@ app = Celery("test_tasks", broker=broker, backend=backend)
 
 
 @app.task
-def add_task(params: dict = {}):
+def add_task():
     JsonLog.error()
