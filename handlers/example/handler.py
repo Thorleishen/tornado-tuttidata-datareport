@@ -23,3 +23,4 @@ class TestHandler(tornado.web.RequestHandler):
     async def post(self):
         ioloop = tornado.ioloop.IOLoop.current()
         ioloop.add_handler()
+        self.application.default_object

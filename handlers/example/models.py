@@ -11,3 +11,6 @@ from handlers.base_model import BaseModel
 
 class User(BaseModel):
     username = CharField()
+
+    class Meta:
+        table_name = 'user'
