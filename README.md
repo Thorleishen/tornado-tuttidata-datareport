@@ -87,5 +87,9 @@ tornado-celery: https://gitee.com/yohannlee/tornado-celery/blob/master/examples/
 > middleware 通用中间件，实现中间层数据处理以及服务接口耗时等日志信息
 
 
+### 监控
+1. sentry 错误告警监控 - 可配合企业微信机器人或叮叮机器人使用 
+2. ELK - 日志采集及UI查询界面 EleaticSearch LogStash Kibana
+
 ### 功能
 目前只是对以往项目结构进行重构，以及通用功能进行封装
